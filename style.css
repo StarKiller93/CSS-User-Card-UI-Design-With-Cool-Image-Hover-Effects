@@ -1,0 +1,117 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+	position: relative;
+	width: 1000px;
+	margin: 150px auto 0;
+	height: auto;
+}
+
+.container h1 {
+	text-align: center;
+	font-weight: bold;
+	background: linear-gradient(to right, #f32170, #ffeb07, #2196f3, #ff00eb);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+}
+.user-card {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 440px;
+	grid-gap: 40px;
+}
+
+.user-card .card {
+	position: relative;
+	background: #000;
+	overflow: hidden;
+	border-radius: 10px;
+	transition: all 0.5s
+}
+
+.user-card .card:hover .img-box {
+	opacity: 0.5;
+}
+
+.user-card .card .img-box {
+	transition: all 0.5s;
+}
+
+.user-card .card .img-box img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.user-card .card .content {
+	position: absolute;
+	width: 100%;
+	height: 60%;
+	bottom: -100%;
+	padding: 20px;
+	padding-top: 60px;
+	box-sizing: border-box;
+	text-align: center;
+	transition: 0.5s;
+}
+
+.user-card .card:hover {
+	cursor: pointer;
+}
+
+.user-card .card:hover .content {
+	bottom: 0;
+}
+
+.user-card .card:nth-child(1) .content {
+	background: linear-gradient(0deg, #c21833, transparent);
+}
+
+.user-card .card:nth-child(2) .content {
+	background: linear-gradient(0deg, #8012a5, transparent);
+}
+
+.user-card .card:nth-child(3) .content {
+	background: linear-gradient(0deg, #BD18CF, transparent);
+}
+
+.user-card .card .content h2 {
+	display: block;
+	margin: 0 0 10px;
+	padding: 0;
+	color: #fff;
+	font-size: 20px;
+}
+
+.user-card .card .content h2 span {
+	color: #ffeb3b;
+	font-size: 16px;
+}
+
+.user-card .card .content ul {
+	margin: 20px 0 0;
+	padding: 0;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.user-card .card .content ul li {
+	list-style: none;
+}
+
+.user-card .card .content ul li a {
+	color: #fff;
+	padding: 0 10px;
+	font-size: 18px;
+}
